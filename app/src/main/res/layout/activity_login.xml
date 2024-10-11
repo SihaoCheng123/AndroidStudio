@@ -5,24 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen">
-
-    <View
-        android:id="@+id/splashGradient"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient"
-        android:alpha="0.6"
-        />
-
-    <ImageView
-        android:id="@+id/splashGlideBackground"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+    tools:context=".Login">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/splashGLH1"
+        android:id="@+id/loginGLH1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -30,25 +16,45 @@
         />
 
     <ImageView
-        android:id="@+id/splashLogo"
+        android:id="@+id/loginLogo"
         android:layout_width="100dp"
         android:layout_height="120dp"
         android:src="@drawable/iconito"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/splashGLH1"
+        app:layout_constraintTop_toBottomOf="@id/loginGLH1"
         />
 
     <TextView
-        android:id="@+id/splashAppName"
+        android:id="@+id/loginAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/splashLogo"
+        app:layout_constraintTop_toBottomOf="@id/loginLogo"
+        android:textColor="@color/black"
         android:textSize="60sp"
         android:fontFamily="@font/campanascript"
         />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginUsernameTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginAppName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:startIconDrawable="@drawable/icono_usuario"
+        android:layout_marginTop="20dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
