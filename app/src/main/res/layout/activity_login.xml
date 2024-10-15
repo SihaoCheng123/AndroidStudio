@@ -106,7 +106,7 @@
         />
 
     <TextView
-        android:id="@+id/loginRegistro"
+        android:id="@+id/loginRegisterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿Todavía no estás registrado?"
@@ -114,7 +114,8 @@
         app:layout_constraintEnd_toEndOf="@id/splashGLV2"
         app:layout_constraintTop_toBottomOf="@id/loginButton"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
         />
 
 
