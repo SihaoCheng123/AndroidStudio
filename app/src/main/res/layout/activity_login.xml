@@ -12,7 +12,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15"
+        app:layout_constraintGuide_begin="85dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashGLV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/splashGLV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"
+
         />
 
     <ImageView
@@ -43,8 +60,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/loginAppName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/splashGLV1"
+        app:layout_constraintEnd_toEndOf="@id/splashGLV2"
         app:startIconDrawable="@drawable/icono_usuario"
         android:layout_marginTop="20dp"
         >
@@ -61,10 +78,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/loginUsernameTIL"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/splashGLV1"
+        app:layout_constraintEnd_toEndOf="@id/splashGLV2"
         app:startIconDrawable="@drawable/icono_password"
         android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true"
         >
         <EditText
             android:layout_width="match_parent"
@@ -76,18 +94,28 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/loginPasswordTIL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"
+        app:icon="@drawable/icono_login"
         android:hint="Iniciar"
         android:textColorHint="@color/white"
         />
 
-
-
+    <TextView
+        android:id="@+id/loginRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Todavía no estás registrado?"
+        app:layout_constraintStart_toStartOf="@id/splashGLV1"
+        app:layout_constraintEnd_toEndOf="@id/splashGLV2"
+        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
