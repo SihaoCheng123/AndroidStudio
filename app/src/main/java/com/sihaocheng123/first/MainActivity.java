@@ -1,7 +1,10 @@
 
 package com.sihaocheng123.first;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 
 //import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,5 +24,12 @@ public class MainActivity extends AppCompatActivity {
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 //            return insets;
 //        });
+        TextView welcomeText = findViewById(R.id.welcomeText);
+        TextView addedText = findViewById(R.id.addedText);
+        SharedPreferences sharedPreferences = getSharedPreferences("Usuario",Context.MODE_PRIVATE);
+        String name= sharedPreferences.getString("userName","anonimo");
+        String password= sharedPreferences.getString("userPassword","contraseña");
+        welcomeText.setText("Hola," + name);
+        addedText.setText("Tu contraseña es: " + password);
     }
 }
