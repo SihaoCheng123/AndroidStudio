@@ -47,7 +47,7 @@ public class Register extends AppCompatActivity {
                 Pattern pattern = Patterns.EMAIL_ADDRESS;
 
                 try {
-                    if(username == null || userEmail == null || userPassword == null || userConfirmPassword == null){
+                    if(username.isEmpty()|| userEmail.isEmpty() || userPassword.isEmpty() || userConfirmPassword.isEmpty()){
                         Toast toast = Toast.makeText(getApplicationContext(), "No puede haber campos vacíos", Toast.LENGTH_SHORT);
                         toast.show();
                     }else {
